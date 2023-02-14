@@ -85,14 +85,14 @@ def main():
     else:
         if not os.path.isdir(args.out):
             os.makedirs(args.out)
-        for root, dirs, files in os.walk(args.man):
+        for root, dirs, files in os.walk(args.inp):
             for fl in files:
-                if '-mor-pos-chunk' in args.inp:
-                    file_name = args.inp[: args.inp.find('-mor-pos-chunk')]
-                elif '-pos-chunk-mor' in args.inp:
-                    file_name = args.inp[: args.inp.find('-pos-chunk-mor')]
+                if '-mor-pos-chunk' in fl:
+                    file_name = args.inp[: fl.find('-mor-pos-chunk')]
+                elif '-pos-chunk-mor' in fl:
+                    file_name = args.inp[: fl.find('-pos-chunk-mor')]
                 else:
-                    file_name = args.inp[: args.inp.rfind('.')]
+                    file_name = args.inp[: fl.rfind('.')]
                 input_path = os.path.join(root, fl)
                 updated_ssf_sentences = extract_information_level_wise_for_file(input_path, args.lvl)
                 output_path = os.path.join(args.out, fl)
