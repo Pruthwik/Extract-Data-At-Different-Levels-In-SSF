@@ -88,14 +88,20 @@ def main():
         for root, dirs, files in os.walk(args.inp):
             for fl in files:
                 if '-mor-pos-chunk' in fl:
-                    file_name = args.inp[: fl.find('-mor-pos-chunk')]
+                    file_name = fl[: fl.find('-mor-pos-chunk')]
                 elif '-pos-chunk-mor' in fl:
-                    file_name = args.inp[: fl.find('-pos-chunk-mor')]
+                    file_name = fl[: fl.find('-pos-chunk-mor')]
                 else:
-                    file_name = args.inp[: fl.rfind('.')]
+                    file_name = fl[: fl.rfind('.')]
+                if args.lvl == 0:
+                    output_file_name = file_name + '-pos.txt'
+                elif args.lvl == 1:
+                    output_file_name = file_name + '-mor.txt'
+                else:
+                    output_file_name = file_name + '-pos-chunk.txt'
                 input_path = os.path.join(root, fl)
                 updated_ssf_sentences = extract_information_level_wise_for_file(input_path, args.lvl)
-                output_path = os.path.join(args.out, fl)
+                output_path = os.path.join(args.out, output_file_name)
                 write_lines_to_file(updated_ssf_sentences, output_path)
 
 
