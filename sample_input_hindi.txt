@@ -1,0 +1,38 @@
+<Sentence id='1'>
+1	((	NP	<fs name='NP' drel='r6:NP2'>
+1.1	जहाँ	PR_PRP	<fs af='जहाँ,pn,,,,o,,' posn='10' name='जहाँ'>
+1.2	के	PSP	<fs af='का,psp,m,pl,,o,,' posn='20' name='के'>
+	))
+2	((	NP	<fs name='NP2' drel='ccof:CCP'>
+2.1	मंदिरों	N_NN	<fs af='मंदिर,n,m,pl,3,o,0,0' posn='30' name='मंदिरों'>
+	))
+3	((	CCP	<fs name='CCP' drel='r6:NP4'>
+3.1	और	CC_CCD	<fs af='और,avy,,,,,,' posn='40' name='और'>
+	))
+4	((	NP	<fs name='NP3' drel='ccof:CCP'>
+4.1	महलों	N_NN	<fs af='महल,n,m,pl,3,o,0,0' posn='50' name='महलों'>
+4.2	की	PSP	<fs af='का,psp,f,sg,,o,,' posn='60' name='की'>
+	))
+5	((	NP	<fs name='NP4' drel='k2:VGF'>
+5.1	चमक	N_NN	<fs af='चमक,n,f,sg,3,o,0,0' posn='70' name='चमक'>
+5.2	को	PSP	<fs af='को,psp,,,,,,' posn='80' name='को'>
+	))
+6	((	NP	<fs name='NP5' drel='r6:NP6'>
+6.1	समय	N_NN	<fs af='समय,n,m,sg,3,o,0,0' posn='90' name='समय'>
+6.2	की	PSP	<fs af='का,psp,f,sg,,d,,' posn='100' name='की2'>
+	))
+7	((	NP	<fs name='NP6' drel='k1:VGF'>
+7.1	धुंध	N_NN	<fs af='धुंध,n,f,sg,3,d,0,0' posn='110' name='धुंध'>
+7.2	भी	RP_RPD	<fs af='भी,avy,,,,,,' posn='120' name='भी'>
+	))
+8	((	VGF	<fs name='VGF' voicetype='active' stype='declarative'>
+8.1	धुँधला	V_VM	<fs af='धुँधला,v,any,any,any,,या,yA' posn='130' name='धुँधला'>
+8.2	नहीं	RP_NEG	<fs af='नहीं,avy,,,,,,' posn='140' name='नहीं'>
+8.3	सकी	V_VAUX	<fs af='सक,v,f,sg,any,,या,yA' posn='150' name='सकी'>
+8.4	है	V_VAUX	<fs af='है,v,any,sg,3,,है,hE' posn='160' name='है'>
+	))
+9	((	BLK	<fs name='BLK' drel='rsym:VGF'>
+9.1	.	RD_PUNC	<fs af='.,punc,,,,,,' posn='170' name='.'>
+	))
+</Sentence>
+

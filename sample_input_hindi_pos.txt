@@ -1,0 +1,19 @@
+<Sentence id='1'>
+2	जहाँ	PR_PRP
+3	के	PSP
+6	मंदिरों	N_NN
+9	और	CC_CCD
+12	महलों	N_NN
+13	की	PSP
+16	चमक	N_NN
+17	को	PSP
+20	समय	N_NN
+21	की	PSP
+24	धुंध	N_NN
+25	भी	RP_RPD
+28	धुँधला	V_VM
+29	नहीं	RP_NEG
+30	सकी	V_VAUX
+31	है	V_VAUX
+34	.	RD_PUNC
+</Sentence>

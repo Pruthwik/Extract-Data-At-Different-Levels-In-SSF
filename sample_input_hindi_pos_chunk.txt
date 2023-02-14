@@ -1,0 +1,37 @@
+<Sentence id='1'>
+1	((	NP
+1.1	जहाँ	PR_PRP
+1.2	के	PSP
+	))
+2	((	NP
+2.1	मंदिरों	N_NN
+	))
+3	((	CCP
+3.1	और	CC_CCD
+	))
+4	((	NP
+4.1	महलों	N_NN
+4.2	की	PSP
+	))
+5	((	NP
+5.1	चमक	N_NN
+5.2	को	PSP
+	))
+6	((	NP
+6.1	समय	N_NN
+6.2	की	PSP
+	))
+7	((	NP
+7.1	धुंध	N_NN
+7.2	भी	RP_RPD
+	))
+8	((	VGF
+8.1	धुँधला	V_VM
+8.2	नहीं	RP_NEG
+8.3	सकी	V_VAUX
+8.4	है	V_VAUX
+	))
+9	((	BLK
+9.1	.	RD_PUNC
+	))
+</Sentence>
