@@ -1,0 +1,19 @@
+<Sentence id='1'>
+1	जहाँ	PR_PRP	<fs af='जहाँ,pn,,,,o,,' posn='10' name='जहाँ'>
+2	के	PSP	<fs af='का,psp,m,pl,,o,,' posn='20' name='के'>
+3	मंदिरों	N_NN	<fs af='मंदिर,n,m,pl,3,o,0,0' posn='30' name='मंदिरों'>
+4	और	CC_CCD	<fs af='और,avy,,,,,,' posn='40' name='और'>
+5	महलों	N_NN	<fs af='महल,n,m,pl,3,o,0,0' posn='50' name='महलों'>
+6	की	PSP	<fs af='का,psp,f,sg,,o,,' posn='60' name='की'>
+7	चमक	N_NN	<fs af='चमक,n,f,sg,3,o,0,0' posn='70' name='चमक'>
+8	को	PSP	<fs af='को,psp,,,,,,' posn='80' name='को'>
+9	समय	N_NN	<fs af='समय,n,m,sg,3,o,0,0' posn='90' name='समय'>
+10	की	PSP	<fs af='का,psp,f,sg,,d,,' posn='100' name='की2'>
+11	धुंध	N_NN	<fs af='धुंध,n,f,sg,3,d,0,0' posn='110' name='धुंध'>
+12	भी	RP_RPD	<fs af='भी,avy,,,,,,' posn='120' name='भी'>
+13	धुँधला	V_VM	<fs af='धुँधला,v,any,any,any,,या,yA' posn='130' name='धुँधला'>
+14	नहीं	RP_NEG	<fs af='नहीं,avy,,,,,,' posn='140' name='नहीं'>
+15	सकी	V_VAUX	<fs af='सक,v,f,sg,any,,या,yA' posn='150' name='सकी'>
+16	है	V_VAUX	<fs af='है,v,any,sg,3,,है,hE' posn='160' name='है'>
+17	.	RD_PUNC	<fs af='.,punc,,,,,,' posn='170' name='.'>
+</Sentence>

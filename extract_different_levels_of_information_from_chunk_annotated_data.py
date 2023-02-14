@@ -36,6 +36,7 @@ def write_lines_to_file(lines, file_path):
 def extract_tokens_and_other_info_level_wise(sentence_lines, level=0):
     """Extract tokens and other info in SSF sentence according to level.."""
     token_with_features_level_wise = []
+    token_addr = 1
     for index, line in enumerate(sentence_lines):
         if level == 2 and search('^\d+\t\(\(\t[A-Z]+\t', line):
             line_split = line.split('\t')
@@ -47,9 +48,11 @@ def extract_tokens_and_other_info_level_wise(sentence_lines, level=0):
                 addr, token, pos = line.split('\t')
                 morph = ''
             if level == 0:
-                extracted_info = '\t'.join([str(index + 1), token, pos])
+                extracted_info = '\t'.join([str(token_addr), token, pos])
+                token_addr += 1
             elif level == 1:
-                extracted_info = '\t'.join([str(index + 1), token, pos, morph])
+                extracted_info = '\t'.join([str(token_addr), token, pos, morph])
+                token_addr += 1
             else:
                 extracted_info = '\t'.join([addr, token, pos])
             token_with_features_level_wise.append(extracted_info)
