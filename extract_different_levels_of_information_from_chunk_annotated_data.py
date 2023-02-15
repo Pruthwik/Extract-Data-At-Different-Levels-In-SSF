@@ -38,15 +38,19 @@ def extract_tokens_and_other_info_level_wise(sentence_lines, level=0):
     token_with_features_level_wise = []
     token_addr = 1
     for index, line in enumerate(sentence_lines):
+        line = line.strip()
+        line_split = line.split('\t')
         if level == 2 and search('^\d+\t\(\(\t[A-Z]+\t', line):
-            line_split = line.split('\t')
             token_with_features_level_wise.append('\t'.join(line_split[: 3]))
         if search('^\d+\.\d+\t', line):
-            if len(line.split('\t')) == 4:
-                addr, token, pos, morph = line.split('\t')
-            else:
+            if len(line_split) >= 4:
+                addr, token, pos, morph = line.split('\t')[: 4]
+            elif len(line_split) == 3:
                 addr, token, pos = line.split('\t')
                 morph = ''
+            else:
+                print("Incorrect Annotations at Token level", line)
+                return None
             if level == 0:
                 extracted_info = '\t'.join([str(token_addr), token, pos])
                 token_addr += 1
@@ -56,7 +60,7 @@ def extract_tokens_and_other_info_level_wise(sentence_lines, level=0):
             else:
                 extracted_info = '\t'.join([addr, token, pos])
             token_with_features_level_wise.append(extracted_info)
-        if level == 2 and line.strip() == '))':
+        if level == 2 and line == '))':
             token_with_features_level_wise.append('\t))')
     return token_with_features_level_wise
 
@@ -69,9 +73,12 @@ def extract_information_level_wise_for_file(file_path, level=0):
     for (header, sentence_text, footer) in ssf_sentences:
         sentence_lines = sentence_text.split('\n')
         token_with_features_level_wise = extract_tokens_and_other_info_level_wise(sentence_lines, level)
-        updated_ssf_sentence_text = '\n'.join(token_with_features_level_wise)
-        updated_ssf_sentence = '\n'.join([header, updated_ssf_sentence_text, footer])
-        updated_ssf_sentences.append(updated_ssf_sentence + '\n')
+        if token_with_features_level_wise is None:
+            print('Error in annotation for the sentence:', sentence_text)
+        else:
+            updated_ssf_sentence_text = '\n'.join(token_with_features_level_wise)
+            updated_ssf_sentence = '\n'.join([header, updated_ssf_sentence_text, footer])
+            updated_ssf_sentences.append(updated_ssf_sentence + '\n')
     return updated_ssf_sentences
 
 
