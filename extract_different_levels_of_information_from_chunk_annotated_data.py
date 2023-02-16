@@ -40,7 +40,7 @@ def extract_tokens_and_other_info_level_wise(sentence_lines, level=0):
     for index, line in enumerate(sentence_lines):
         line = line.strip()
         line_split = line.split('\t')
-        if level == 2 and search('^\d+\t\(\(\t[A-Z]+\t', line):
+        if level == 2 and search('^\d+\t\(\(\t[A-Z]+', line):
             token_with_features_level_wise.append('\t'.join(line_split[: 3]))
         if search('^\d+\.\d+\t', line):
             if len(line_split) >= 4:
